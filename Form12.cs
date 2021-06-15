@@ -35,7 +35,6 @@ namespace NonBom
             label4.Text = "";
             label13.Text = "";
             label7.Text = DateTime.Today.ToString("d");
-
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -339,6 +338,8 @@ namespace NonBom
                 mySqlCommand.ExecuteNonQuery();
                 connection.Close();
                 BeirXML();
+                Form39 form39 = new Form39();
+                form39.ShowDialog();
                 button1.BackColor = Color.Gray;
                 DialogResult dialogResult = MessageBox.Show("Cimke nyomtatás !!", "Cimke", MessageBoxButtons.YesNo, MessageBoxIcon.None);
                 if (dialogResult == DialogResult.Yes)
@@ -425,7 +426,7 @@ namespace NonBom
     "</msg:Body>" +
 "</msg:Msg>");
             // Save the document to a file.
-            string f_nev = "Bevet" + pecset + DateTime.Now.ToString("yyyyMMddHHmmss") + ".xml";
+            string f_nev = "NBBevet" + pecset + DateTime.Now.ToString("yyyyMMddHHmmss") + ".xml";
           //   doc.Save(f_nev);
             doc.Save(@"\\10.0.0.11\inputxml\" + f_nev);
         }

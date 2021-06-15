@@ -1,3 +1,56 @@
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\bin\Debug\NonBom.exe.config
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\bin\Debug\NonBom.exe
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\bin\Debug\NonBom.pdb
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\bin\Debug\DgvFilterPopup.dll
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.csprojAssemblyReference.cache
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form1.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form10.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form11.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form12.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form13.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form14.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form15.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form16.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form17.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form18.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form19.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form2.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form20.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form21.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form22.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form23.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form24.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form25.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form26.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form27.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form28.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form29.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form3.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form30.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form31.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form32.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form33.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form34.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form4.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form5.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form6.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form7.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form8.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form9.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Properties.Resources.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.csproj.GenerateResource.cache
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.csproj.CopyComplete
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.exe
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.pdb
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form182.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form35.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form36.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form37.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2017\Projects\NonBom\NonBom\obj\Debug\NonBom.Form38.resources
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\NonBom.exe.config
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\NonBom.exe
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\NonBom.pdb
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\DgvFilterPopup.dll
 C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\obj\Debug\NonBom.csprojAssemblyReference.cache
 C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\obj\Debug\NonBom.Form1.resources
 C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\obj\Debug\NonBom.Form10.resources
@@ -37,10 +90,73 @@ C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\obj\D
 C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\obj\Debug\NonBom.Properties.Resources.resources
 C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\obj\Debug\NonBom.csproj.GenerateResource.cache
 C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\obj\Debug\NonBom.csproj.CoreCompileInputs.cache
-C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\NonBom.exe.config
-C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\NonBom.exe
-C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\NonBom.pdb
-C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\DgvFilterPopup.dll
 C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\obj\Debug\NonBom.csproj.CopyComplete
 C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\obj\Debug\NonBom.exe
 C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\obj\Debug\NonBom.pdb
+X:\C#\Projects\NonBom\NonBom\bin\Debug\NonBom.exe.config
+X:\C#\Projects\NonBom\NonBom\bin\Debug\NonBom.exe
+X:\C#\Projects\NonBom\NonBom\bin\Debug\NonBom.pdb
+X:\C#\Projects\NonBom\NonBom\bin\Debug\DgvFilterPopup.dll
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.csprojAssemblyReference.cache
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form1.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form10.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form11.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form12.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form13.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form14.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form15.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form16.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form17.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form18.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form182.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form19.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form2.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form20.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form21.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form22.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form23.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form24.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form25.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form26.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form27.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form28.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form29.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form3.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form30.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form31.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form32.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form33.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form35.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form39.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form4.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form5.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form6.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form7.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form8.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Form9.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.Properties.Resources.resources
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.csproj.GenerateResource.cache
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.csproj.CoreCompileInputs.cache
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.csproj.CopyComplete
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.exe
+X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.pdb
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\AxShockwaveFlashObjects.dll
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\stdole.dll
+C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\obj\Debug\NonBom.Form39.resources
