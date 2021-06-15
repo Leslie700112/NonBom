@@ -443,6 +443,8 @@ namespace NonBom
                 }
             connection.Close();
             Thread.Sleep(1000);
+            Form39 form39 = new Form39();
+            form39.ShowDialog();
             dataGridView3.Rows.Clear();
             Torol();
         }

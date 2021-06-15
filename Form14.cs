@@ -188,6 +188,8 @@ namespace NonBom
             string f_nev = "NBM" + textBox1.Text.Trim() + DateTime.Now.ToString("yyyyMMddHHmmss") + ".xml";
           //   doc.Save(f_nev);
             doc.Save(@"\\10.0.0.11\inputxml\" + f_nev);
+            Form39 form39 = new Form39();
+            form39.ShowDialog();
             this.vNB_SC330300_StockBatch1TableAdapter.Fill(this.dataSet14.VNB_SC330300_StockBatch1);
             this.vNB_SC330300_StockBatchTableAdapter.Fill(this.dataSet14.VNB_SC330300_StockBatch);
             Torol();

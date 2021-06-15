@@ -230,6 +230,8 @@ namespace NonBom
             // doc.Save(f_nev);
             doc.Save(@"\\10.0.0.11\inputxml\" + f_nev);
             Thread.Sleep(1000);
+            Form39 form39 = new Form39();
+            form39.ShowDialog();
             Torol();
         }
 

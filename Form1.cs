@@ -399,6 +399,12 @@ namespace NonBom
                         Form28.honnan = "1";
                         ShowForm2(Form28);
                     }
+                    else
+                    {
+                        MessageBox.Show("ACCESZ DINÁJDID !", "Figyelmeztetés", MessageBoxButtons.OK,
+                                                          MessageBoxIcon.Stop, MessageBoxDefaultButton.Button1);
+                        treeView1.SelectedNode = treeView1.Nodes["Node20"];
+                    }
                     break;
                 case "Konszig Rendelések Bevételezése":
                     if (jog.Trim() == "A" || jog.Trim() == "I" || jog.Trim() == "E" || jog.Trim() == "R")
@@ -593,11 +599,11 @@ namespace NonBom
         private void Jogosult()
         {
             int itemFound = JogokBindingSource.Find("Jogosult", user);
-            if (itemFound < 0)
-                 MessageBox.Show("ACCESZ DINÁJDID !", "Figyelmeztetés", MessageBoxButtons.OK,
-                                 MessageBoxIcon.Stop, MessageBoxDefaultButton.Button1);
-            else
-            {
+            //if (itemFound < 0)
+            //     MessageBox.Show("ACCESZ DINÁJDID !", "Figyelmeztetés", MessageBoxButtons.OK,
+            //                     MessageBoxIcon.Stop, MessageBoxDefaultButton.Button1);
+            //else
+            //{
                 DataTable joguDataTable =dataSet1.Tables["Jogok"];
                 joguDataTable.PrimaryKey =
                      new DataColumn[]
@@ -610,7 +616,7 @@ namespace NonBom
                     jog = jogi["NonBom_Jog"].ToString();
                     pecset = jogi["Pecset"].ToString().Trim();
                 }
-            }
+            //}
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
