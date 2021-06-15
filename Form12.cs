@@ -35,7 +35,7 @@ namespace NonBom
             label4.Text = "";
             label13.Text = "";
             label7.Text = DateTime.Today.ToString("d");
-
+            //j
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
