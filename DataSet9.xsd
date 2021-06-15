@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet9" targetNamespace="http://tempuri.org/DataSet9.xsd" xmlns:mstns="http://tempuri.org/DataSet9.xsd" xmlns="http://tempuri.org/DataSet9.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ScaCompDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ScaCompDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.NonBom.Properties.Settings.GlobalReference.Default.ScaCompDBConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="FusetechConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FusetechConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.NonBom.Properties.Settings.GlobalReference.Default.FusetechConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VNB_PC030300_POLineFileTableAdapter" GeneratorDataComponentClassName="VNB_PC030300_POLineFileTableAdapter" Name="VNB_PC030300_POLineFile" UserDataComponentName="VNB_PC030300_POLineFileTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ScaCompDBConnectionString (Settings)" DbObjectName="ScaCompDB.dbo.VNB_PC030300_POLineFile" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        L.PurchaOrdNo, MAX(L.SupplierOrderLineRef) AS SupplierOrderLineRef, MAX(P.SuppCodBuyer) AS SuppCodBuyer, MAX(S.SupplierName) AS SupplierName, MAX(P.OrderValue) AS OrderValue, MAX(P.OrderDate) 
+                         AS OrderDate, MAX(A.RendelesSzam) AS RendelesSzam, MAX(F.Kerelmezo) AS Kerte, MAX(F.Status) AS Status, COUNT(L.StockCode) AS Lines, MAX(D.CurrencyShortName) AS Deviza
+FROM            VNB_PC030300_POLineFile AS L LEFT OUTER JOIN
+                         VF_PC010300_POMasterFile AS P ON L.PurchaOrdNo = P.PurchOrderNo LEFT OUTER JOIN
+                         VF_PL010300_SupplierFile AS S ON P.SuppCodBuyer = S.SupplierCode LEFT OUTER JOIN
+                         Fusetech.dbo.NBAnyagigenylo AS A ON L.SupplierOrderLineRef = CAST(A.RendelesSzam AS nvarchar) + CAST(A.RendSorszam AS nvarchar) LEFT OUTER JOIN
+                         Fusetech.dbo.NBAnyagigenyloFej AS F ON A.RendelesSzam = F.ID LEFT OUTER JOIN
+                         VF_SYCD0300_DevizaNevek AS D ON P.CurrCode = D.CurrencyCode_2
+WHERE        (A.Status = 2)
+GROUP BY L.PurchaOrdNo
+ORDER BY L.PurchaOrdNo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PurchaOrdNo" DataSetColumn="PurchaOrdNo" />
+              <Mapping SourceColumn="SupplierOrderLineRef" DataSetColumn="SupplierOrderLineRef" />
+              <Mapping SourceColumn="SuppCodBuyer" DataSetColumn="SuppCodBuyer" />
+              <Mapping SourceColumn="SupplierName" DataSetColumn="SupplierName" />
+              <Mapping SourceColumn="OrderValue" DataSetColumn="OrderValue" />
+              <Mapping SourceColumn="OrderDate" DataSetColumn="OrderDate" />
+              <Mapping SourceColumn="RendelesSzam" DataSetColumn="RendelesSzam" />
+              <Mapping SourceColumn="Kerte" DataSetColumn="Kerte" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
+              <Mapping SourceColumn="Lines" DataSetColumn="Lines" />
+              <Mapping SourceColumn="Deviza" DataSetColumn="Deviza" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="JogokTableAdapter" GeneratorDataComponentClassName="JogokTableAdapter" Name="Jogok" UserDataComponentName="JogokTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FusetechConnectionString1 (Settings)" DbObjectName="Fusetech.dbo.Jogok" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        Jogosult, NonBom_Jog, Pecset, Email
+FROM            Jogok</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Jogosult" DataSetColumn="Jogosult" />
+              <Mapping SourceColumn="NonBom_Jog" DataSetColumn="NonBom_Jog" />
+              <Mapping SourceColumn="Pecset" DataSetColumn="Pecset" />
+              <Mapping SourceColumn="Email" DataSetColumn="Email" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet9" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet9" msprop:Generator_UserDSName="DataSet9">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="VNB_PC030300_POLineFile" msprop:Generator_TableClassName="VNB_PC030300_POLineFileDataTable" msprop:Generator_TableVarName="tableVNB_PC030300_POLineFile" msprop:Generator_TablePropName="VNB_PC030300_POLineFile" msprop:Generator_RowDeletingName="VNB_PC030300_POLineFileRowDeleting" msprop:Generator_RowChangingName="VNB_PC030300_POLineFileRowChanging" msprop:Generator_RowEvHandlerName="VNB_PC030300_POLineFileRowChangeEventHandler" msprop:Generator_RowDeletedName="VNB_PC030300_POLineFileRowDeleted" msprop:Generator_UserTableName="VNB_PC030300_POLineFile" msprop:Generator_RowChangedName="VNB_PC030300_POLineFileRowChanged" msprop:Generator_RowEvArgName="VNB_PC030300_POLineFileRowChangeEvent" msprop:Generator_RowClassName="VNB_PC030300_POLineFileRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PurchaOrdNo" msprop:Generator_ColumnVarNameInTable="columnPurchaOrdNo" msprop:Generator_ColumnPropNameInRow="PurchaOrdNo" msprop:Generator_ColumnPropNameInTable="PurchaOrdNoColumn" msprop:Generator_UserColumnName="PurchaOrdNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SupplierOrderLineRef" msprop:Generator_ColumnVarNameInTable="columnSupplierOrderLineRef" msprop:Generator_ColumnPropNameInRow="SupplierOrderLineRef" msprop:Generator_ColumnPropNameInTable="SupplierOrderLineRefColumn" msprop:Generator_UserColumnName="SupplierOrderLineRef" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SuppCodBuyer" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSuppCodBuyer" msprop:Generator_ColumnPropNameInRow="SuppCodBuyer" msprop:Generator_ColumnPropNameInTable="SuppCodBuyerColumn" msprop:Generator_UserColumnName="SuppCodBuyer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SupplierName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSupplierName" msprop:Generator_ColumnPropNameInRow="SupplierName" msprop:Generator_ColumnPropNameInTable="SupplierNameColumn" msprop:Generator_UserColumnName="SupplierName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrderValue" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnOrderValue" msprop:Generator_ColumnPropNameInRow="OrderValue" msprop:Generator_ColumnPropNameInTable="OrderValueColumn" msprop:Generator_UserColumnName="OrderValue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OrderDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnOrderDate" msprop:Generator_ColumnPropNameInRow="OrderDate" msprop:Generator_ColumnPropNameInTable="OrderDateColumn" msprop:Generator_UserColumnName="OrderDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="RendelesSzam" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRendelesSzam" msprop:Generator_ColumnPropNameInRow="RendelesSzam" msprop:Generator_ColumnPropNameInTable="RendelesSzamColumn" msprop:Generator_UserColumnName="RendelesSzam" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Kerte" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnKerte" msprop:Generator_ColumnPropNameInRow="Kerte" msprop:Generator_ColumnPropNameInTable="KerteColumn" msprop:Generator_UserColumnName="Kerte" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Status" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Lines" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLines" msprop:Generator_ColumnPropNameInRow="Lines" msprop:Generator_ColumnPropNameInTable="LinesColumn" msprop:Generator_UserColumnName="Lines" type="xs:int" minOccurs="0" />
+              <xs:element name="Deviza" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDeviza" msprop:Generator_ColumnPropNameInRow="Deviza" msprop:Generator_ColumnPropNameInTable="DevizaColumn" msprop:Generator_UserColumnName="Deviza" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Jogok" msprop:Generator_TableClassName="JogokDataTable" msprop:Generator_TableVarName="tableJogok" msprop:Generator_RowChangedName="JogokRowChanged" msprop:Generator_TablePropName="Jogok" msprop:Generator_RowDeletingName="JogokRowDeleting" msprop:Generator_RowChangingName="JogokRowChanging" msprop:Generator_RowEvHandlerName="JogokRowChangeEventHandler" msprop:Generator_RowDeletedName="JogokRowDeleted" msprop:Generator_RowClassName="JogokRow" msprop:Generator_UserTableName="Jogok" msprop:Generator_RowEvArgName="JogokRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Jogosult" msprop:Generator_ColumnVarNameInTable="columnJogosult" msprop:Generator_ColumnPropNameInRow="Jogosult" msprop:Generator_ColumnPropNameInTable="JogosultColumn" msprop:Generator_UserColumnName="Jogosult" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NonBom_Jog" msprop:Generator_ColumnVarNameInTable="columnNonBom_Jog" msprop:Generator_ColumnPropNameInRow="NonBom_Jog" msprop:Generator_ColumnPropNameInTable="NonBom_JogColumn" msprop:Generator_UserColumnName="NonBom_Jog" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pecset" msprop:Generator_ColumnVarNameInTable="columnPecset" msprop:Generator_ColumnPropNameInRow="Pecset" msprop:Generator_ColumnPropNameInTable="PecsetColumn" msprop:Generator_UserColumnName="Pecset" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet14" targetNamespace="http://tempuri.org/DataSet14.xsd" xmlns:mstns="http://tempuri.org/DataSet14.xsd" xmlns="http://tempuri.org/DataSet14.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ScaCompDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ScaCompDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.NonBom.Properties.Settings.GlobalReference.Default.ScaCompDBConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VNB_SC330300_StockBatchTableAdapter" GeneratorDataComponentClassName="VNB_SC330300_StockBatchTableAdapter" Name="VNB_SC330300_StockBatch" UserDataComponentName="VNB_SC330300_StockBatchTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ScaCompDBConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        RTRIM(SC33.StockItem) AS StockItem, SC01.Description1, SC01.Description2, SC01.InternRem1, SC01.InternRem2, SC33.WarehouseID, SC33.BinNumber, SC33.BalanceQty, RTRIM(SCU.Description) 
+                         AS Description, SC33.Locktatus, SC33.DateReceived, SC33.SupplRetuCust, PL.SupplierName, SC33.OrderReceive, SC33.QCCategory, SC33.QCQuantity, SC33.ExpireDate
+FROM            VNB_SC330300_StockBatch AS SC33 LEFT OUTER JOIN
+                         VNB_SC010300_Stockfile AS SC01 ON SC33.StockItem = SC01.StockCode LEFT OUTER JOIN
+                         VF_SCUN0300_UnitCode AS SCU ON SC01.UnitCodeStoc = SCU.UnitCode LEFT OUTER JOIN
+                         VF_PL010300_SupplierFile AS PL ON SC33.SupplRetuCust = PL.SupplierCode
+WHERE        (SC33.WarehouseID = '03') AND (SC33.BalanceQty &gt; 0)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="StockItem" DataSetColumn="StockItem" />
+              <Mapping SourceColumn="WarehouseID" DataSetColumn="WarehouseID" />
+              <Mapping SourceColumn="BinNumber" DataSetColumn="BinNumber" />
+              <Mapping SourceColumn="BalanceQty" DataSetColumn="BalanceQty" />
+              <Mapping SourceColumn="Locktatus" DataSetColumn="Locktatus" />
+              <Mapping SourceColumn="DateReceived" DataSetColumn="DateReceived" />
+              <Mapping SourceColumn="SupplRetuCust" DataSetColumn="SupplRetuCust" />
+              <Mapping SourceColumn="OrderReceive" DataSetColumn="OrderReceive" />
+              <Mapping SourceColumn="QCCategory" DataSetColumn="QCCategory" />
+              <Mapping SourceColumn="QCQuantity" DataSetColumn="QCQuantity" />
+              <Mapping SourceColumn="ExpireDate" DataSetColumn="ExpireDate" />
+              <Mapping SourceColumn="Description1" DataSetColumn="Description1" />
+              <Mapping SourceColumn="Description2" DataSetColumn="Description2" />
+              <Mapping SourceColumn="InternRem1" DataSetColumn="InternRem1" />
+              <Mapping SourceColumn="InternRem2" DataSetColumn="InternRem2" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="SupplierName" DataSetColumn="SupplierName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VF_SC360300_StockBinNoTableAdapter" GeneratorDataComponentClassName="VF_SC360300_StockBinNoTableAdapter" Name="VF_SC360300_StockBinNo" UserDataComponentName="VF_SC360300_StockBinNoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ScaCompDBConnectionString (Settings)" DbObjectName="ScaCompDB.dbo.VF_SC360300_StockBinNo" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        WarehouseID, BinNumber, BinDescript1, BinDescript2
+FROM            VF_SC360300_StockBinNo
+WHERE        (WarehouseID = '50')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="WarehouseID" DataSetColumn="WarehouseID" />
+              <Mapping SourceColumn="BinNumber" DataSetColumn="BinNumber" />
+              <Mapping SourceColumn="BinDescript1" DataSetColumn="BinDescript1" />
+              <Mapping SourceColumn="BinDescript2" DataSetColumn="BinDescript2" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VNB_SC330300_StockBatch1TableAdapter" GeneratorDataComponentClassName="VNB_SC330300_StockBatch1TableAdapter" Name="VNB_SC330300_StockBatch1" UserDataComponentName="VNB_SC330300_StockBatch1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ScaCompDBConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        RTRIM(SC33.StockItem) AS StockItem, SC01.Description1, SC01.Description2, SC01.InternRem1, SC01.InternRem2, SC33.WarehouseID, SC33.BinNumber, SC33.BalanceQty, RTRIM(SCU.Description) 
+                         AS Description, SC33.Locktatus, SC33.DateReceived, SC33.SupplRetuCust, PL.SupplierName, SC33.OrderReceive, SC33.QCCategory, SC33.QCQuantity, SC33.ExpireDate
+FROM            VNB_SC330300_StockBatch AS SC33 LEFT OUTER JOIN
+                         VNB_SC010300_Stockfile AS SC01 ON SC33.StockItem = SC01.StockCode LEFT OUTER JOIN
+                         VF_SCUN0300_UnitCode AS SCU ON SC01.UnitCodeStoc = SCU.UnitCode LEFT OUTER JOIN
+                         VF_PL010300_SupplierFile AS PL ON SC33.SupplRetuCust = PL.SupplierCode
+WHERE        (SC33.WarehouseID = '03') AND (SC33.BalanceQty &gt; 0)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="StockItem" DataSetColumn="StockItem" />
+              <Mapping SourceColumn="WarehouseID" DataSetColumn="WarehouseID" />
+              <Mapping SourceColumn="BinNumber" DataSetColumn="BinNumber" />
+              <Mapping SourceColumn="BalanceQty" DataSetColumn="BalanceQty" />
+              <Mapping SourceColumn="Locktatus" DataSetColumn="Locktatus" />
+              <Mapping SourceColumn="DateReceived" DataSetColumn="DateReceived" />
+              <Mapping SourceColumn="SupplRetuCust" DataSetColumn="SupplRetuCust" />
+              <Mapping SourceColumn="OrderReceive" DataSetColumn="OrderReceive" />
+              <Mapping SourceColumn="QCCategory" DataSetColumn="QCCategory" />
+              <Mapping SourceColumn="QCQuantity" DataSetColumn="QCQuantity" />
+              <Mapping SourceColumn="ExpireDate" DataSetColumn="ExpireDate" />
+              <Mapping SourceColumn="Description1" DataSetColumn="Description1" />
+              <Mapping SourceColumn="Description2" DataSetColumn="Description2" />
+              <Mapping SourceColumn="InternRem1" DataSetColumn="InternRem1" />
+              <Mapping SourceColumn="InternRem2" DataSetColumn="InternRem2" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="SupplierName" DataSetColumn="SupplierName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet14" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet14" msprop:Generator_UserDSName="DataSet14">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="VNB_SC330300_StockBatch" msprop:Generator_TableClassName="VNB_SC330300_StockBatchDataTable" msprop:Generator_TableVarName="tableVNB_SC330300_StockBatch" msprop:Generator_TablePropName="VNB_SC330300_StockBatch" msprop:Generator_RowDeletingName="VNB_SC330300_StockBatchRowDeleting" msprop:Generator_RowChangingName="VNB_SC330300_StockBatchRowChanging" msprop:Generator_RowEvHandlerName="VNB_SC330300_StockBatchRowChangeEventHandler" msprop:Generator_RowDeletedName="VNB_SC330300_StockBatchRowDeleted" msprop:Generator_UserTableName="VNB_SC330300_StockBatch" msprop:Generator_RowChangedName="VNB_SC330300_StockBatchRowChanged" msprop:Generator_RowEvArgName="VNB_SC330300_StockBatchRowChangeEvent" msprop:Generator_RowClassName="VNB_SC330300_StockBatchRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StockItem" msprop:Generator_ColumnVarNameInTable="columnStockItem" msprop:Generator_ColumnPropNameInRow="StockItem" msprop:Generator_ColumnPropNameInTable="StockItemColumn" msprop:Generator_UserColumnName="StockItem" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WarehouseID" msprop:Generator_ColumnVarNameInTable="columnWarehouseID" msprop:Generator_ColumnPropNameInRow="WarehouseID" msprop:Generator_ColumnPropNameInTable="WarehouseIDColumn" msprop:Generator_UserColumnName="WarehouseID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BinNumber" msprop:Generator_ColumnVarNameInTable="columnBinNumber" msprop:Generator_ColumnPropNameInRow="BinNumber" msprop:Generator_ColumnPropNameInTable="BinNumberColumn" msprop:Generator_UserColumnName="BinNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BalanceQty" msprop:Generator_ColumnVarNameInTable="columnBalanceQty" msprop:Generator_ColumnPropNameInRow="BalanceQty" msprop:Generator_ColumnPropNameInTable="BalanceQtyColumn" msprop:Generator_UserColumnName="BalanceQty" type="xs:decimal" />
+              <xs:element name="Locktatus" msprop:Generator_ColumnVarNameInTable="columnLocktatus" msprop:Generator_ColumnPropNameInRow="Locktatus" msprop:Generator_ColumnPropNameInTable="LocktatusColumn" msprop:Generator_UserColumnName="Locktatus" type="xs:int" />
+              <xs:element name="DateReceived" msprop:Generator_ColumnVarNameInTable="columnDateReceived" msprop:Generator_ColumnPropNameInRow="DateReceived" msprop:Generator_ColumnPropNameInTable="DateReceivedColumn" msprop:Generator_UserColumnName="DateReceived" type="xs:dateTime" />
+              <xs:element name="SupplRetuCust" msprop:Generator_ColumnVarNameInTable="columnSupplRetuCust" msprop:Generator_ColumnPropNameInRow="SupplRetuCust" msprop:Generator_ColumnPropNameInTable="SupplRetuCustColumn" msprop:Generator_UserColumnName="SupplRetuCust">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrderReceive" msprop:Generator_ColumnVarNameInTable="columnOrderReceive" msprop:Generator_ColumnPropNameInRow="OrderReceive" msprop:Generator_ColumnPropNameInTable="OrderReceiveColumn" msprop:Generator_UserColumnName="OrderReceive">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QCCategory" msprop:Generator_ColumnVarNameInTable="columnQCCategory" msprop:Generator_ColumnPropNameInRow="QCCategory" msprop:Generator_ColumnPropNameInTable="QCCategoryColumn" msprop:Generator_UserColumnName="QCCategory">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QCQuantity" msprop:Generator_ColumnVarNameInTable="columnQCQuantity" msprop:Generator_ColumnPropNameInRow="QCQuantity" msprop:Generator_ColumnPropNameInTable="QCQuantityColumn" msprop:Generator_UserColumnName="QCQuantity" type="xs:decimal" />
+              <xs:element name="ExpireDate" msprop:Generator_ColumnVarNameInTable="columnExpireDate" msprop:Generator_ColumnPropNameInRow="ExpireDate" msprop:Generator_ColumnPropNameInTable="ExpireDateColumn" msprop:Generator_UserColumnName="ExpireDate" type="xs:dateTime" />
+              <xs:element name="Description1" msprop:Generator_ColumnVarNameInTable="columnDescription1" msprop:Generator_ColumnPropNameInRow="Description1" msprop:Generator_ColumnPropNameInTable="Description1Column" msprop:Generator_UserColumnName="Description1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description2" msprop:Generator_ColumnVarNameInTable="columnDescription2" msprop:Generator_ColumnPropNameInRow="Description2" msprop:Generator_ColumnPropNameInTable="Description2Column" msprop:Generator_UserColumnName="Description2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InternRem1" msprop:Generator_ColumnVarNameInTable="columnInternRem1" msprop:Generator_ColumnPropNameInRow="InternRem1" msprop:Generator_ColumnPropNameInTable="InternRem1Column" msprop:Generator_UserColumnName="InternRem1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InternRem2" msprop:Generator_ColumnVarNameInTable="columnInternRem2" msprop:Generator_ColumnPropNameInRow="InternRem2" msprop:Generator_ColumnPropNameInTable="InternRem2Column" msprop:Generator_UserColumnName="InternRem2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SupplierName" msprop:Generator_ColumnVarNameInTable="columnSupplierName" msprop:Generator_ColumnPropNameInRow="SupplierName" msprop:Generator_ColumnPropNameInTable="SupplierNameColumn" msprop:Generator_UserColumnName="SupplierName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VF_SC360300_StockBinNo" msprop:Generator_TableClassName="VF_SC360300_StockBinNoDataTable" msprop:Generator_TableVarName="tableVF_SC360300_StockBinNo" msprop:Generator_TablePropName="VF_SC360300_StockBinNo" msprop:Generator_RowDeletingName="VF_SC360300_StockBinNoRowDeleting" msprop:Generator_RowChangingName="VF_SC360300_StockBinNoRowChanging" msprop:Generator_RowEvHandlerName="VF_SC360300_StockBinNoRowChangeEventHandler" msprop:Generator_RowDeletedName="VF_SC360300_StockBinNoRowDeleted" msprop:Generator_UserTableName="VF_SC360300_StockBinNo" msprop:Generator_RowChangedName="VF_SC360300_StockBinNoRowChanged" msprop:Generator_RowEvArgName="VF_SC360300_StockBinNoRowChangeEvent" msprop:Generator_RowClassName="VF_SC360300_StockBinNoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="WarehouseID" msprop:Generator_ColumnVarNameInTable="columnWarehouseID" msprop:Generator_ColumnPropNameInRow="WarehouseID" msprop:Generator_ColumnPropNameInTable="WarehouseIDColumn" msprop:Generator_UserColumnName="WarehouseID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BinNumber" msprop:Generator_ColumnVarNameInTable="columnBinNumber" msprop:Generator_ColumnPropNameInRow="BinNumber" msprop:Generator_ColumnPropNameInTable="BinNumberColumn" msprop:Generator_UserColumnName="BinNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BinDescript1" msprop:Generator_ColumnVarNameInTable="columnBinDescript1" msprop:Generator_ColumnPropNameInRow="BinDescript1" msprop:Generator_ColumnPropNameInTable="BinDescript1Column" msprop:Generator_UserColumnName="BinDescript1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BinDescript2" msprop:Generator_ColumnVarNameInTable="columnBinDescript2" msprop:Generator_ColumnPropNameInRow="BinDescript2" msprop:Generator_ColumnPropNameInTable="BinDescript2Column" msprop:Generator_UserColumnName="BinDescript2">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VNB_SC330300_StockBatch1" msprop:Generator_TableClassName="VNB_SC330300_StockBatch1DataTable" msprop:Generator_TableVarName="tableVNB_SC330300_StockBatch1" msprop:Generator_TablePropName="VNB_SC330300_StockBatch1" msprop:Generator_RowDeletingName="VNB_SC330300_StockBatch1RowDeleting" msprop:Generator_RowChangingName="VNB_SC330300_StockBatch1RowChanging" msprop:Generator_RowEvHandlerName="VNB_SC330300_StockBatch1RowChangeEventHandler" msprop:Generator_RowDeletedName="VNB_SC330300_StockBatch1RowDeleted" msprop:Generator_UserTableName="VNB_SC330300_StockBatch1" msprop:Generator_RowChangedName="VNB_SC330300_StockBatch1RowChanged" msprop:Generator_RowEvArgName="VNB_SC330300_StockBatch1RowChangeEvent" msprop:Generator_RowClassName="VNB_SC330300_StockBatch1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StockItem" msprop:Generator_ColumnVarNameInTable="columnStockItem" msprop:Generator_ColumnPropNameInRow="StockItem" msprop:Generator_ColumnPropNameInTable="StockItemColumn" msprop:Generator_UserColumnName="StockItem" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WarehouseID" msprop:Generator_ColumnVarNameInTable="columnWarehouseID" msprop:Generator_ColumnPropNameInRow="WarehouseID" msprop:Generator_ColumnPropNameInTable="WarehouseIDColumn" msprop:Generator_UserColumnName="WarehouseID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BinNumber" msprop:Generator_ColumnVarNameInTable="columnBinNumber" msprop:Generator_ColumnPropNameInRow="BinNumber" msprop:Generator_ColumnPropNameInTable="BinNumberColumn" msprop:Generator_UserColumnName="BinNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BalanceQty" msprop:Generator_ColumnVarNameInTable="columnBalanceQty" msprop:Generator_ColumnPropNameInRow="BalanceQty" msprop:Generator_ColumnPropNameInTable="BalanceQtyColumn" msprop:Generator_UserColumnName="BalanceQty" type="xs:decimal" />
+              <xs:element name="Locktatus" msprop:Generator_ColumnVarNameInTable="columnLocktatus" msprop:Generator_ColumnPropNameInRow="Locktatus" msprop:Generator_ColumnPropNameInTable="LocktatusColumn" msprop:Generator_UserColumnName="Locktatus" type="xs:int" />
+              <xs:element name="DateReceived" msprop:Generator_ColumnVarNameInTable="columnDateReceived" msprop:Generator_ColumnPropNameInRow="DateReceived" msprop:Generator_ColumnPropNameInTable="DateReceivedColumn" msprop:Generator_UserColumnName="DateReceived" type="xs:dateTime" />
+              <xs:element name="SupplRetuCust" msprop:Generator_ColumnVarNameInTable="columnSupplRetuCust" msprop:Generator_ColumnPropNameInRow="SupplRetuCust" msprop:Generator_ColumnPropNameInTable="SupplRetuCustColumn" msprop:Generator_UserColumnName="SupplRetuCust">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrderReceive" msprop:Generator_ColumnVarNameInTable="columnOrderReceive" msprop:Generator_ColumnPropNameInRow="OrderReceive" msprop:Generator_ColumnPropNameInTable="OrderReceiveColumn" msprop:Generator_UserColumnName="OrderReceive">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QCCategory" msprop:Generator_ColumnVarNameInTable="columnQCCategory" msprop:Generator_ColumnPropNameInRow="QCCategory" msprop:Generator_ColumnPropNameInTable="QCCategoryColumn" msprop:Generator_UserColumnName="QCCategory">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QCQuantity" msprop:Generator_ColumnVarNameInTable="columnQCQuantity" msprop:Generator_ColumnPropNameInRow="QCQuantity" msprop:Generator_ColumnPropNameInTable="QCQuantityColumn" msprop:Generator_UserColumnName="QCQuantity" type="xs:decimal" />
+              <xs:element name="ExpireDate" msprop:Generator_ColumnVarNameInTable="columnExpireDate" msprop:Generator_ColumnPropNameInRow="ExpireDate" msprop:Generator_ColumnPropNameInTable="ExpireDateColumn" msprop:Generator_UserColumnName="ExpireDate" type="xs:dateTime" />
+              <xs:element name="Description1" msprop:Generator_ColumnVarNameInTable="columnDescription1" msprop:Generator_ColumnPropNameInRow="Description1" msprop:Generator_ColumnPropNameInTable="Description1Column" msprop:Generator_UserColumnName="Description1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description2" msprop:Generator_ColumnVarNameInTable="columnDescription2" msprop:Generator_ColumnPropNameInRow="Description2" msprop:Generator_ColumnPropNameInTable="Description2Column" msprop:Generator_UserColumnName="Description2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InternRem1" msprop:Generator_ColumnVarNameInTable="columnInternRem1" msprop:Generator_ColumnPropNameInRow="InternRem1" msprop:Generator_ColumnPropNameInTable="InternRem1Column" msprop:Generator_UserColumnName="InternRem1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InternRem2" msprop:Generator_ColumnVarNameInTable="columnInternRem2" msprop:Generator_ColumnPropNameInRow="InternRem2" msprop:Generator_ColumnPropNameInTable="InternRem2Column" msprop:Generator_UserColumnName="InternRem2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SupplierName" msprop:Generator_ColumnVarNameInTable="columnSupplierName" msprop:Generator_ColumnPropNameInRow="SupplierName" msprop:Generator_ColumnPropNameInTable="SupplierNameColumn" msprop:Generator_UserColumnName="SupplierName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:VF_SC360300_StockBinNo" />
+      <xs:field xpath="mstns:WarehouseID" />
+      <xs:field xpath="mstns:BinNumber" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

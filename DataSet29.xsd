@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet29" targetNamespace="http://tempuri.org/DataSet29.xsd" xmlns:mstns="http://tempuri.org/DataSet29.xsd" xmlns="http://tempuri.org/DataSet29.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="FusetechConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FusetechConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.NonBom.Properties.Settings.GlobalReference.Default.FusetechConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FelhasznalasDataTableTableAdapter" GeneratorDataComponentClassName="FelhasznalasDataTableTableAdapter" Name="FelhasznalasDataTable" UserDataComponentName="FelhasznalasDataTableTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FusetechConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        F.BizonylatSzam, F.Cikkszam, SC01.Description1, SC01.Description2, SC01.InternRem1, F.Raktar, F.Polc, F.Mennyiseg, E.TextDescription AS Terület, F.KtsghKod, F.KtsghNev, F.Igenylo, I.Nev AS TextDescription, F.Kiadta, 
+                         K.TextDescription AS Expr1, F.Megjegyzes, ISNULL(F.GepSzerszam, N'') AS GepKod, ISNULL(G.Sor + ' ' + G.Allomas + ' ' + G.Eszkoz, N'') AS GepMegnevezes, ISNULL(F.FelhIdeje, N'2017-01-01') AS FelhIdeje, 
+                         RTRIM(U.Description) AS MEgys, I.TSz
+FROM            NBFelhasznalas AS F LEFT OUTER JOIN
+                         ScaCompDB.dbo.VNB_SC010300_Stockfile AS SC01 ON F.Cikkszam = SC01.StockCode LEFT OUTER JOIN
+                         HRTranzakciok_Kod_Group AS I ON RTRIM(F.Igenylo) = RTRIM(REPLACE(I.Kod, '*', '')) LEFT OUTER JOIN
+                         DolgKodok AS K ON RTRIM(F.Kiadta) = RTRIM(K.Key1) LEFT OUTER JOIN
+                         MTGeplista AS G ON F.GepSzerszam = G.Fusetech_Kod LEFT OUTER JOIN
+                         ScaCompDB.dbo.VNB_SY240300_EXT_termcsop AS E ON SC01.ExtProdGroup = E.Key1 LEFT OUTER JOIN
+                         ScaCompDB.dbo.VF_SCUN0300_UnitCode AS U ON SC01.UnitCodeStoc = U.UnitCode
+ORDER BY F.Cikkszam</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="BizonylatSzam" DataSetColumn="BizonylatSzam" />
+              <Mapping SourceColumn="Cikkszam" DataSetColumn="Cikkszam" />
+              <Mapping SourceColumn="Description1" DataSetColumn="Description1" />
+              <Mapping SourceColumn="Description2" DataSetColumn="Description2" />
+              <Mapping SourceColumn="InternRem1" DataSetColumn="InternRem1" />
+              <Mapping SourceColumn="Raktar" DataSetColumn="Raktar" />
+              <Mapping SourceColumn="Polc" DataSetColumn="Polc" />
+              <Mapping SourceColumn="Mennyiseg" DataSetColumn="Mennyiseg" />
+              <Mapping SourceColumn="Terület" DataSetColumn="Terület" />
+              <Mapping SourceColumn="KtsghKod" DataSetColumn="KtsghKod" />
+              <Mapping SourceColumn="KtsghNev" DataSetColumn="KtsghNev" />
+              <Mapping SourceColumn="Igenylo" DataSetColumn="Igenylo" />
+              <Mapping SourceColumn="TextDescription" DataSetColumn="TextDescription" />
+              <Mapping SourceColumn="Kiadta" DataSetColumn="Kiadta" />
+              <Mapping SourceColumn="Megjegyzes" DataSetColumn="Megjegyzes" />
+              <Mapping SourceColumn="GepKod" DataSetColumn="GepKod" />
+              <Mapping SourceColumn="GepMegnevezes" DataSetColumn="GepMegnevezes" />
+              <Mapping SourceColumn="FelhIdeje" DataSetColumn="FelhIdeje" />
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+              <Mapping SourceColumn="MEgys" DataSetColumn="MEgys" />
+              <Mapping SourceColumn="TSz" DataSetColumn="TSz" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet29" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet29" msprop:Generator_UserDSName="DataSet29">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FelhasznalasDataTable" msprop:Generator_TableClassName="FelhasznalasDataTableDataTable" msprop:Generator_TableVarName="tableFelhasznalasDataTable" msprop:Generator_RowChangedName="FelhasznalasDataTableRowChanged" msprop:Generator_TablePropName="FelhasznalasDataTable" msprop:Generator_RowDeletingName="FelhasznalasDataTableRowDeleting" msprop:Generator_RowChangingName="FelhasznalasDataTableRowChanging" msprop:Generator_RowEvHandlerName="FelhasznalasDataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="FelhasznalasDataTableRowDeleted" msprop:Generator_RowClassName="FelhasznalasDataTableRow" msprop:Generator_UserTableName="FelhasznalasDataTable" msprop:Generator_RowEvArgName="FelhasznalasDataTableRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BizonylatSzam" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnBizonylatSzam" msprop:Generator_ColumnPropNameInRow="BizonylatSzam" msprop:Generator_ColumnPropNameInTable="BizonylatSzamColumn" msprop:Generator_UserColumnName="BizonylatSzam" type="xs:int" />
+              <xs:element name="Cikkszam" msprop:Generator_ColumnVarNameInTable="columnCikkszam" msprop:Generator_ColumnPropNameInRow="Cikkszam" msprop:Generator_ColumnPropNameInTable="CikkszamColumn" msprop:Generator_UserColumnName="Cikkszam" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description1" msprop:Generator_ColumnVarNameInTable="columnDescription1" msprop:Generator_ColumnPropNameInRow="Description1" msprop:Generator_ColumnPropNameInTable="Description1Column" msprop:Generator_UserColumnName="Description1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description2" msprop:Generator_ColumnVarNameInTable="columnDescription2" msprop:Generator_ColumnPropNameInRow="Description2" msprop:Generator_ColumnPropNameInTable="Description2Column" msprop:Generator_UserColumnName="Description2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InternRem1" msprop:Generator_ColumnVarNameInTable="columnInternRem1" msprop:Generator_ColumnPropNameInRow="InternRem1" msprop:Generator_ColumnPropNameInTable="InternRem1Column" msprop:Generator_UserColumnName="InternRem1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Raktar" msprop:Generator_ColumnVarNameInTable="columnRaktar" msprop:Generator_ColumnPropNameInRow="Raktar" msprop:Generator_ColumnPropNameInTable="RaktarColumn" msprop:Generator_UserColumnName="Raktar" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Polc" msprop:Generator_ColumnVarNameInTable="columnPolc" msprop:Generator_ColumnPropNameInRow="Polc" msprop:Generator_ColumnPropNameInTable="PolcColumn" msprop:Generator_UserColumnName="Polc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Mennyiseg" msprop:Generator_ColumnVarNameInTable="columnMennyiseg" msprop:Generator_ColumnPropNameInRow="Mennyiseg" msprop:Generator_ColumnPropNameInTable="MennyisegColumn" msprop:Generator_UserColumnName="Mennyiseg" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Terület" msprop:Generator_ColumnVarNameInTable="columnTerület" msprop:Generator_ColumnPropNameInRow="Terület" msprop:Generator_ColumnPropNameInTable="TerületColumn" msprop:Generator_UserColumnName="Terület" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KtsghKod" msprop:Generator_ColumnVarNameInTable="columnKtsghKod" msprop:Generator_ColumnPropNameInRow="KtsghKod" msprop:Generator_ColumnPropNameInTable="KtsghKodColumn" msprop:Generator_UserColumnName="KtsghKod" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KtsghNev" msprop:Generator_ColumnVarNameInTable="columnKtsghNev" msprop:Generator_ColumnPropNameInRow="KtsghNev" msprop:Generator_ColumnPropNameInTable="KtsghNevColumn" msprop:Generator_UserColumnName="KtsghNev" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Igenylo" msprop:Generator_ColumnVarNameInTable="columnIgenylo" msprop:Generator_ColumnPropNameInRow="Igenylo" msprop:Generator_ColumnPropNameInTable="IgenyloColumn" msprop:Generator_UserColumnName="Igenylo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TextDescription" msprop:Generator_ColumnVarNameInTable="columnTextDescription" msprop:Generator_ColumnPropNameInRow="TextDescription" msprop:Generator_ColumnPropNameInTable="TextDescriptionColumn" msprop:Generator_UserColumnName="TextDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Kiadta" msprop:Generator_ColumnVarNameInTable="columnKiadta" msprop:Generator_ColumnPropNameInRow="Kiadta" msprop:Generator_ColumnPropNameInTable="KiadtaColumn" msprop:Generator_UserColumnName="Kiadta" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Megjegyzes" msprop:Generator_ColumnVarNameInTable="columnMegjegyzes" msprop:Generator_ColumnPropNameInRow="Megjegyzes" msprop:Generator_ColumnPropNameInTable="MegjegyzesColumn" msprop:Generator_UserColumnName="Megjegyzes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GepKod" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnGepKod" msprop:Generator_ColumnPropNameInRow="GepKod" msprop:Generator_ColumnPropNameInTable="GepKodColumn" msprop:Generator_UserColumnName="GepKod" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GepMegnevezes" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnGepMegnevezes" msprop:Generator_ColumnPropNameInRow="GepMegnevezes" msprop:Generator_ColumnPropNameInTable="GepMegnevezesColumn" msprop:Generator_UserColumnName="GepMegnevezes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="352" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FelhIdeje" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFelhIdeje" msprop:Generator_ColumnPropNameInRow="FelhIdeje" msprop:Generator_ColumnPropNameInTable="FelhIdejeColumn" msprop:Generator_UserColumnName="FelhIdeje" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Expr1" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MEgys" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMEgys" msprop:Generator_ColumnPropNameInRow="MEgys" msprop:Generator_ColumnPropNameInTable="MEgysColumn" msprop:Generator_UserColumnName="MEgys" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TSz" msprop:Generator_ColumnVarNameInTable="columnTSz" msprop:Generator_ColumnPropNameInRow="TSz" msprop:Generator_ColumnPropNameInTable="TSzColumn" msprop:Generator_UserColumnName="TSz" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

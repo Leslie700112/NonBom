@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet18" targetNamespace="http://tempuri.org/DataSet18.xsd" xmlns:mstns="http://tempuri.org/DataSet18.xsd" xmlns="http://tempuri.org/DataSet18.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="2" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ScaCompDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ScaCompDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.NonBom.Properties.Settings.GlobalReference.Default.ScaCompDBConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="FusetechConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FusetechConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.NonBom.Properties.Settings.GlobalReference.Default.FusetechConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VF_PL010300_SupplierFileTableAdapter" GeneratorDataComponentClassName="VF_PL010300_SupplierFileTableAdapter" Name="VF_PL010300_SupplierFile" UserDataComponentName="VF_PL010300_SupplierFileTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ScaCompDBConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        '' AS SupplierName, '' AS SupplierCode, '' AS CurrencyCode
+UNION ALL
+SELECT        P.SupplierName, P.SupplierCode, D.CurrencyShortName
+FROM            VF_PL010300_SupplierFile AS P LEFT OUTER JOIN
+                         VF_SYCD0300_DevizaNevek AS D ON P.CurrencyCode = D.CurrencyCode
+WHERE        (NOT (P.SupplierName LIKE '%NE HASZN%')) AND (P.SupplierCode &lt;&gt; '1034')
+ORDER BY SupplierName</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SupplierName" DataSetColumn="SupplierName" />
+              <Mapping SourceColumn="SupplierCode" DataSetColumn="SupplierCode" />
+              <Mapping SourceColumn="CurrencyCode" DataSetColumn="CurrencyCode" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VF_SY240300_EXT_termcsopTableAdapter" GeneratorDataComponentClassName="VF_SY240300_EXT_termcsopTableAdapter" Name="VF_SY240300_EXT_termcsop" UserDataComponentName="VF_SY240300_EXT_termcsopTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ScaCompDBConnectionString (Settings)" DbObjectName="ScaCompDB.dbo.VF_SY240300_EXT_termcsop" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        Key1, TextDescription
+FROM            VF_SY240300_EXT_termcsop</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Key1" DataSetColumn="Key1" />
+              <Mapping SourceColumn="TextDescription" DataSetColumn="TextDescription" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MTGeplistaTableAdapter" GeneratorDataComponentClassName="MTGeplistaTableAdapter" Name="MTGeplista" UserDataComponentName="MTGeplistaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FusetechConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        Sor + ' ' + Allomas + ' ' + Eszkoz + ' ' + RTRIM(Fusetech_Kod) AS Gepek, RTRIM(Fusetech_Kod) AS FusetechKod
+FROM            MTGeplista</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Gepek" DataSetColumn="Gepek" />
+              <Mapping SourceColumn="FusetechKod" DataSetColumn="FusetechKod" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="NBSzolgKodok_SzolgTipusTableAdapter" GeneratorDataComponentClassName="NBSzolgKodok_SzolgTipusTableAdapter" Name="NBSzolgKodok_SzolgTipus" UserDataComponentName="NBSzolgKodok_SzolgTipusTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FusetechConnectionString (Settings)" DbObjectName="Fusetech.dbo.NBSzolgKodok_SzolgTipus" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        Tip, Kod, Megnevezes, Megnevezes2
+FROM            NBSzolgKodok_SzolgTipus
+WHERE        (Tip = 1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Tip" DataSetColumn="Tip" />
+              <Mapping SourceColumn="Kod" DataSetColumn="Kod" />
+              <Mapping SourceColumn="Megnevezes" DataSetColumn="Megnevezes" />
+              <Mapping SourceColumn="Megnevezes2" DataSetColumn="Megnevezes2" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MTGeplista1TableAdapter" GeneratorDataComponentClassName="MTGeplista1TableAdapter" Name="MTGeplista1" UserDataComponentName="MTGeplista1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FusetechConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        Sor + ' ' + Allomas + ' ' + Eszkoz + ' ' + RTRIM(Fusetech_Kod) AS Gepek, RTRIM(Fusetech_Kod) AS FusetechKod
+FROM            MTGeplista</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Gepek" DataSetColumn="Gepek" />
+              <Mapping SourceColumn="FusetechKod" DataSetColumn="FusetechKod" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="NBKodokTableAdapter" GeneratorDataComponentClassName="NBKodokTableAdapter" Name="NBKodok" UserDataComponentName="NBKodokTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FusetechConnectionString (Settings)" DbObjectName="Fusetech.dbo.NBKodok" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        Tip, Kod, Megnevezes
+FROM            NBKodok
+WHERE        (Tip = '2')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Tip" DataSetColumn="Tip" />
+              <Mapping SourceColumn="Kod" DataSetColumn="Kod" />
+              <Mapping SourceColumn="Megnevezes" DataSetColumn="Megnevezes" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet18" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet18" msprop:Generator_UserDSName="DataSet18">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="VF_PL010300_SupplierFile" msprop:Generator_TableClassName="VF_PL010300_SupplierFileDataTable" msprop:Generator_TableVarName="tableVF_PL010300_SupplierFile" msprop:Generator_TablePropName="VF_PL010300_SupplierFile" msprop:Generator_RowDeletingName="VF_PL010300_SupplierFileRowDeleting" msprop:Generator_RowChangingName="VF_PL010300_SupplierFileRowChanging" msprop:Generator_RowEvHandlerName="VF_PL010300_SupplierFileRowChangeEventHandler" msprop:Generator_RowDeletedName="VF_PL010300_SupplierFileRowDeleted" msprop:Generator_UserTableName="VF_PL010300_SupplierFile" msprop:Generator_RowChangedName="VF_PL010300_SupplierFileRowChanged" msprop:Generator_RowEvArgName="VF_PL010300_SupplierFileRowChangeEvent" msprop:Generator_RowClassName="VF_PL010300_SupplierFileRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SupplierName" msprop:Generator_ColumnVarNameInTable="columnSupplierName" msprop:Generator_ColumnPropNameInRow="SupplierName" msprop:Generator_ColumnPropNameInTable="SupplierNameColumn" msprop:Generator_UserColumnName="SupplierName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SupplierCode" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSupplierCode" msprop:Generator_ColumnPropNameInRow="SupplierCode" msprop:Generator_ColumnPropNameInTable="SupplierCodeColumn" msprop:Generator_UserColumnName="SupplierCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CurrencyCode" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCurrencyCode" msprop:Generator_ColumnPropNameInRow="CurrencyCode" msprop:Generator_ColumnPropNameInTable="CurrencyCodeColumn" msprop:Generator_UserColumnName="CurrencyCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VF_SY240300_EXT_termcsop" msprop:Generator_TableClassName="VF_SY240300_EXT_termcsopDataTable" msprop:Generator_TableVarName="tableVF_SY240300_EXT_termcsop" msprop:Generator_RowChangedName="VF_SY240300_EXT_termcsopRowChanged" msprop:Generator_TablePropName="VF_SY240300_EXT_termcsop" msprop:Generator_RowDeletingName="VF_SY240300_EXT_termcsopRowDeleting" msprop:Generator_RowChangingName="VF_SY240300_EXT_termcsopRowChanging" msprop:Generator_RowEvHandlerName="VF_SY240300_EXT_termcsopRowChangeEventHandler" msprop:Generator_RowDeletedName="VF_SY240300_EXT_termcsopRowDeleted" msprop:Generator_RowClassName="VF_SY240300_EXT_termcsopRow" msprop:Generator_UserTableName="VF_SY240300_EXT_termcsop" msprop:Generator_RowEvArgName="VF_SY240300_EXT_termcsopRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Key1" msprop:Generator_ColumnVarNameInTable="columnKey1" msprop:Generator_ColumnPropNameInRow="Key1" msprop:Generator_ColumnPropNameInTable="Key1Column" msprop:Generator_UserColumnName="Key1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TextDescription" msprop:Generator_ColumnVarNameInTable="columnTextDescription" msprop:Generator_ColumnPropNameInRow="TextDescription" msprop:Generator_ColumnPropNameInTable="TextDescriptionColumn" msprop:Generator_UserColumnName="TextDescription">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MTGeplista" msprop:Generator_TableClassName="MTGeplistaDataTable" msprop:Generator_TableVarName="tableMTGeplista" msprop:Generator_RowChangedName="MTGeplistaRowChanged" msprop:Generator_TablePropName="MTGeplista" msprop:Generator_RowDeletingName="MTGeplistaRowDeleting" msprop:Generator_RowChangingName="MTGeplistaRowChanging" msprop:Generator_RowEvHandlerName="MTGeplistaRowChangeEventHandler" msprop:Generator_RowDeletedName="MTGeplistaRowDeleted" msprop:Generator_RowClassName="MTGeplistaRow" msprop:Generator_UserTableName="MTGeplista" msprop:Generator_RowEvArgName="MTGeplistaRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Gepek" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnGepek" msprop:Generator_ColumnPropNameInRow="Gepek" msprop:Generator_ColumnPropNameInTable="GepekColumn" msprop:Generator_UserColumnName="Gepek" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="378" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FusetechKod" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFusetechKod" msprop:Generator_ColumnPropNameInRow="FusetechKod" msprop:Generator_ColumnPropNameInTable="FusetechKodColumn" msprop:Generator_UserColumnName="FusetechKod" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="NBSzolgKodok_SzolgTipus" msprop:Generator_TableClassName="NBSzolgKodok_SzolgTipusDataTable" msprop:Generator_TableVarName="tableNBSzolgKodok_SzolgTipus" msprop:Generator_TablePropName="NBSzolgKodok_SzolgTipus" msprop:Generator_RowDeletingName="NBSzolgKodok_SzolgTipusRowDeleting" msprop:Generator_RowChangingName="NBSzolgKodok_SzolgTipusRowChanging" msprop:Generator_RowEvHandlerName="NBSzolgKodok_SzolgTipusRowChangeEventHandler" msprop:Generator_RowDeletedName="NBSzolgKodok_SzolgTipusRowDeleted" msprop:Generator_UserTableName="NBSzolgKodok_SzolgTipus" msprop:Generator_RowChangedName="NBSzolgKodok_SzolgTipusRowChanged" msprop:Generator_RowEvArgName="NBSzolgKodok_SzolgTipusRowChangeEvent" msprop:Generator_RowClassName="NBSzolgKodok_SzolgTipusRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Tip" msprop:Generator_ColumnVarNameInTable="columnTip" msprop:Generator_ColumnPropNameInRow="Tip" msprop:Generator_ColumnPropNameInTable="TipColumn" msprop:Generator_UserColumnName="Tip" type="xs:int" minOccurs="0" />
+              <xs:element name="Kod" msprop:Generator_ColumnVarNameInTable="columnKod" msprop:Generator_ColumnPropNameInRow="Kod" msprop:Generator_ColumnPropNameInTable="KodColumn" msprop:Generator_UserColumnName="Kod" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Megnevezes" msprop:Generator_ColumnVarNameInTable="columnMegnevezes" msprop:Generator_ColumnPropNameInRow="Megnevezes" msprop:Generator_ColumnPropNameInTable="MegnevezesColumn" msprop:Generator_UserColumnName="Megnevezes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Megnevezes2" msprop:Generator_ColumnVarNameInTable="columnMegnevezes2" msprop:Generator_ColumnPropNameInRow="Megnevezes2" msprop:Generator_ColumnPropNameInTable="Megnevezes2Column" msprop:Generator_UserColumnName="Megnevezes2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MTGeplista1" msprop:Generator_TableClassName="MTGeplista1DataTable" msprop:Generator_TableVarName="tableMTGeplista1" msprop:Generator_RowChangedName="MTGeplista1RowChanged" msprop:Generator_TablePropName="MTGeplista1" msprop:Generator_RowDeletingName="MTGeplista1RowDeleting" msprop:Generator_RowChangingName="MTGeplista1RowChanging" msprop:Generator_RowEvHandlerName="MTGeplista1RowChangeEventHandler" msprop:Generator_RowDeletedName="MTGeplista1RowDeleted" msprop:Generator_RowClassName="MTGeplista1Row" msprop:Generator_UserTableName="MTGeplista1" msprop:Generator_RowEvArgName="MTGeplista1RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Gepek" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnGepek" msprop:Generator_ColumnPropNameInRow="Gepek" msprop:Generator_ColumnPropNameInTable="GepekColumn" msprop:Generator_UserColumnName="Gepek" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="378" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FusetechKod" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFusetechKod" msprop:Generator_ColumnPropNameInRow="FusetechKod" msprop:Generator_ColumnPropNameInTable="FusetechKodColumn" msprop:Generator_UserColumnName="FusetechKod" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="NBKodok" msprop:Generator_TableClassName="NBKodokDataTable" msprop:Generator_TableVarName="tableNBKodok" msprop:Generator_TablePropName="NBKodok" msprop:Generator_RowDeletingName="NBKodokRowDeleting" msprop:Generator_RowChangingName="NBKodokRowChanging" msprop:Generator_RowEvHandlerName="NBKodokRowChangeEventHandler" msprop:Generator_RowDeletedName="NBKodokRowDeleted" msprop:Generator_UserTableName="NBKodok" msprop:Generator_RowChangedName="NBKodokRowChanged" msprop:Generator_RowEvArgName="NBKodokRowChangeEvent" msprop:Generator_RowClassName="NBKodokRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Tip" msprop:Generator_ColumnVarNameInTable="columnTip" msprop:Generator_ColumnPropNameInRow="Tip" msprop:Generator_ColumnPropNameInTable="TipColumn" msprop:Generator_UserColumnName="Tip" type="xs:int" minOccurs="0" />
+              <xs:element name="Kod" msprop:Generator_ColumnVarNameInTable="columnKod" msprop:Generator_ColumnPropNameInRow="Kod" msprop:Generator_ColumnPropNameInTable="KodColumn" msprop:Generator_UserColumnName="Kod" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Megnevezes" msprop:Generator_ColumnVarNameInTable="columnMegnevezes" msprop:Generator_ColumnPropNameInRow="Megnevezes" msprop:Generator_ColumnPropNameInTable="MegnevezesColumn" msprop:Generator_UserColumnName="Megnevezes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
