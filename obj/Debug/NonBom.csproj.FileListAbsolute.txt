@@ -140,23 +140,4 @@ X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.csproj.CoreCompileInputs.cache
 X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.csproj.CopyComplete
 X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.exe
 X:\C#\Projects\NonBom\NonBom\obj\Debug\NonBom.pdb
-C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
-C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.ReportSource.dll
-C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.Shared.dll
-C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.Windows.Forms.dll
-C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
-C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
-C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
-C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
-C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
-C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
-C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
-C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
-C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
-C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
-C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
-C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\AxShockwaveFlashObjects.dll
-C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
-C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\ShockwaveFlashObjects.dll
-C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\bin\Debug\stdole.dll
 C:\Users\Fazekaslaszlo\Documents\Visual Studio 2019\Projects\NonBom\NonBom\obj\Debug\NonBom.Form39.resources

@@ -89,7 +89,7 @@ namespace NonBom
               paramField.CurrentValues.Add(paramDiscreteValue);
               paramFields.Add(paramField);
            
-            paramField = new ParameterField(); // <-- This line is added
+              paramField = new ParameterField(); // <-- This line is added
               paramDiscreteValue = new ParameterDiscreteValue();  // <-- This line is added
               paramField.Name = "Email";
               paramDiscreteValue.Value = pecset.ToString();
